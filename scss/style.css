@@ -1,3 +1,36 @@
+body {
+  text-align: center;
+  background: -webkit-gradient(linear, right top, left top, from(#005AA7), to(#FFFDE4));
+  background: linear-gradient(270deg, #005AA7, #FFFDE4);
+  background-size: 400% 400%;
+  -webkit-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 92%;
+  }
+  50% {
+    background-position: 100% 9%;
+  }
+  100% {
+    background-position: 0% 92%;
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 92%;
+  }
+  50% {
+    background-position: 100% 9%;
+  }
+  100% {
+    background-position: 0% 92%;
+  }
+}
+
 .typo, .list a {
   font-size: 60px;
   font-weight: 700;
@@ -13,10 +46,6 @@
 .transition {
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
-}
-
-body {
-  text-align: center;
 }
 
 .wrapper {

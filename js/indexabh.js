@@ -57,6 +57,7 @@ day.prototype.displayDetails = function(){
 }
 function action(day){
     $(".selectorthing").hide();
+    $(".cardsbg").toggle();
     day.displayDetails();
 }
 /////DAY and FOOD
