@@ -3,7 +3,8 @@ $color--primary: #7b00ff;
 
 body {
   text-align: center;
-  background: linear-gradient(270deg, #005AA7, #FFFDE4);
+  background: linear-gradient(270deg, #005aa88a, #fffde58a);
+  opacity: 50;
   background-size: 400% 400%;
 
   -webkit-animation: AnimationName 30s ease infinite;
