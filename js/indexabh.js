@@ -6,7 +6,7 @@ var seq;
 
 $('.placeholder').on('click', function (ev) {
     $('.placeholder').css('opacity', '0');
-    $('.list__ul').toggle();
+    $('.list__ul').toggle(300);
 });
 
 $('.list__ul a').on('click', function (ev) {
@@ -15,7 +15,7 @@ $('.list__ul a').on('click', function (ev) {
     
     $('.placeholder').text( $(this).text() ).css('opacity', '1');
     
-    console.log($('.list__ul').find('li').eq(index).html());
+    //console.log($('.list__ul').find('li').eq(index).html());
     
     seq = $('.list__ul').find('li').eq(index).html();
     $('.list__ul').find('li').eq(index).prependTo('.list__ul');
@@ -40,5 +40,66 @@ Project MAP:
 3- animate the cards via jQuery
 4- give option to select another date => proceed to reload the page
 
-
 */
+function day(day, bf, lu, sn, dn){
+    this.day= day;
+    this.bf= bf;
+    this.lu= lu;
+    this.sn= sn;
+    this.dn= dn;
+}
+day.prototype.displayDetails = function(){
+    console.log(this.day);
+    console.log(this.bf);
+    console.log(this.lu);
+    console.log(this.sn);
+    console.log(this.dn);
+}
+function action(day){
+    $(".selectorthing").hide();
+    day.displayDetails();
+}
+/////DAY and FOOD
+    var mon= new day("mon",
+                ["Aloo Parantha/ Omlette and toast","Tea/Milk" ],
+                [ "Capsicum Chilli, Raita, Rajma","Rice, Chapati"],
+                ["Poha","Tea/Milk" ],
+                ["Egg Curry/ Malai Kofta, Kheer","Chapati" ],
+    );
+    var tue= new day("tue",
+                ["Stuffed Parantha/ Omlette and toast","Butter,Tea/Milk" ],
+                [ "Kadi-Pakora, Hari Subzi","Rice, Chapati"],
+                ["Macroni","Tea/Milk" ],
+                ["Shai Paneer, Custard, Chole","Chapati, Pulao" ],
+    );
+    var wed= new day("wed",
+                ["Aloo Parantha/ Omlette and toast","Tea/Milk" ],
+                [ "Capsicum Chilli, Raita, Rajma","Rice, Chapati"],
+                ["Poha","Tea/Milk" ],
+                ["Egg Curry/ Malai Kofta, Kheer","Chapati" ],
+    );
+    var thu= new day("thu",
+                ["Aloo Parantha/ Omlette and toast","Tea/Milk" ],
+                [ "Capsicum Chilli, Raita, Rajma","Rice, Chapati"],
+                ["Poha","Tea/Milk" ],
+                ["Egg Curry/ Malai Kofta, Kheer","Chapati" ],
+    );
+    var fri= new day("fri",
+                ["Aloo Parantha/ Omlette and toast","Tea/Milk" ],
+                [ "Capsicum Chilli, Raita, Rajma","Rice, Chapati"],
+                ["Poha","Tea/Milk" ],
+                ["Egg Curry/ Malai Kofta, Kheer","Chapati" ],
+    );
+    var sat= new day("sat",
+                ["Aloo Parantha/ Omlette and toast","Tea/Milk" ],
+                [ "Capsicum Chilli, Raita, Rajma","Rice, Chapati"],
+                ["Poha","Tea/Milk" ],
+                ["Egg Curry/ Malai Kofta, Kheer","Chapati" ],
+    );
+    var sun= new day("sun",
+                ["Aloo Parantha/ Omlette and toast","Tea/Milk" ],
+                [ "Capsicum Chilli, Raita, Rajma","Rice, Chapati"],
+                ["Poha","Tea/Milk" ],
+                ["Egg Curry/ Malai Kofta, Kheer","Chapati" ],
+    );
+///////////DAY and FOOD END

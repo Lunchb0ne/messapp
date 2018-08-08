@@ -114,4 +114,8 @@ select option {
 .placeholder:hover {
   color: #888888;
 }
+
+.hide {
+  opacity: 0;
+}
 /*# sourceMappingURL=style.css.map */
