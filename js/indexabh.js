@@ -27,7 +27,9 @@ $('select').on('change', function (e) {
     // Animate select width as placeholder
     $(this).animate({width: $('.placeholder').width() + 'px' });
 });
-//--------------Selet menu code end---------------------------------------------
+
+
+//--------------Select menu code end---------------------------------------------
 /*
 
 Project MAP:
@@ -38,6 +40,53 @@ Project MAP:
 4- give option to select another date => proceed to reload the page
 
 */
+
+
+/////DAY and FOOD
+var mon= new day("mon",
+["Aloo Parantha/ Omlette and Toast","Tea/Milk" ],
+["Capsicum Chilli, Raita, Rajma","Rice, Chapati"],
+["Poha","Tea/Milk" ],
+["Egg Curry/ Malai Kofta, Kheer","Chapati" ],
+);
+var tue= new day("tue",
+["Stuffed Parantha/ Omlette and Toast","Butter,Tea/Milk" ],
+["Kadi-Pakora, Hari Subzi","Rice, Chapati"],
+["Macroni","Tea/Milk" ],
+["Shai Paneer, Custard, Chole","Chapati, Pulao" ],
+);
+var wed= new day("wed",
+["Parantha/ Omlette and Toast","Tea/Milk" ],
+["Seasonal Subzi, Dal","Rice, Chapati"],
+["Pastry","Tea/Milk" ],
+["Chiclken-Curry/ Khadai-Paneer, Halwa","Chapati, Pulao" ],
+);
+var thu= new day("thu",
+["Parantha/ Omlette and Toast","Tea/Milk" ],
+["Dal Makhni, Seasonl Subzi","Rice, Chapati"],
+["Bread Pakora","Tea/Milk" ],
+["Mix Veg/ Aloo, Dal, Gulab Jamum","Chapati, Rice" ],
+);
+var fri= new day("fri",
+["Dosa-Sambhar/ Omlette and toast","Tea/Milk" ],
+["Seasonal Subzi, Rajma","Rice, Chapati"],
+["N/A","N/A" ],
+["N/A","N/A" ],
+);
+var sat= new day("sat",
+["Stuffed Parantha/ Omlette and toast","Tea/Milk" ],
+["Seasonal Subzi, Dal","Rice, Chapati"],
+["Sandwitch","Tea/Milk" ],
+["Aloo-Matar/ Chole, Kheer","Rice, Chapati" ],
+);
+var sun= new day("sun",
+["Aloo Puri/ Omlette and toast","Tea/Milk" ],
+["Paneer, Dal","Rice, Chapati"],
+["Samosa","Tea/Milk" ],
+["Mix Veg, Chole","Rice,Chapati" ],
+);
+///////////DAY and FOOD END
+
 function day(day, bf, lu, sn, dn){
     this.day= day;
     this.bf= bf;
@@ -46,59 +95,24 @@ function day(day, bf, lu, sn, dn){
     this.dn= dn;
 }
 day.prototype.displayDetails = function(){
+    /*
     console.log(this.day);
     console.log(this.bf);
     console.log(this.lu);
     console.log(this.sn);
     console.log(this.dn);
-    $(".box").textcontent = this.bf[0] + "\n" + this.bf[2];
+    */
+    $("#head-1").text("Breakfast");
+    $("#head-2").text("Lunch");
+    $("#head-3").text("Snack");
+    $("#head-4").text("Dinner");
+    $("#body-1").html(this.bf[0]+"<br><div>"+this.bf[1]+"</br></div>");
+    $("#body-2").html(this.lu[0]+"<br><div>"+this.lu[1]+"</br></div>");
+    $("#body-3").html(this.sn[0]+"<br><div>"+this.sn[1]+"</br></div>");
+    $("#body-4").html(this.dn[0]+"<br><div>"+this.dn[1]+"</br></div>");
 }
 function action(day){
     $(".selectorthing").hide();
     $(".cardsbg").show( 600);
     day.displayDetails();
 }
-/////DAY and FOOD
-    var mon= new day("mon",
-                ["Aloo Parantha/ Omlette and toast","Tea/Milk" ],
-                [ "Capsicum Chilli, Raita, Rajma","Rice, Chapati"],
-                ["Poha","Tea/Milk" ],
-                ["Egg Curry/ Malai Kofta, Kheer","Chapati" ],
-    );
-    var tue= new day("tue",
-                ["Stuffed Parantha/ Omlette and toast","Butter,Tea/Milk" ],
-                [ "Kadi-Pakora, Hari Subzi","Rice, Chapati"],
-                ["Macroni","Tea/Milk" ],
-                ["Shai Paneer, Custard, Chole","Chapati, Pulao" ],
-    );
-    var wed= new day("wed",
-                ["Aloo Parantha/ Omlette and toast","Tea/Milk" ],
-                [ "Capsicum Chilli, Raita, Rajma","Rice, Chapati"],
-                ["Poha","Tea/Milk" ],
-                ["Egg Curry/ Malai Kofta, Kheer","Chapati" ],
-    );
-    var thu= new day("thu",
-                ["Aloo Parantha/ Omlette and toast","Tea/Milk" ],
-                [ "Capsicum Chilli, Raita, Rajma","Rice, Chapati"],
-                ["Poha","Tea/Milk" ],
-                ["Egg Curry/ Malai Kofta, Kheer","Chapati" ],
-    );
-    var fri= new day("fri",
-                ["Aloo Parantha/ Omlette and toast","Tea/Milk" ],
-                [ "Capsicum Chilli, Raita, Rajma","Rice, Chapati"],
-                ["Poha","Tea/Milk" ],
-                ["Egg Curry/ Malai Kofta, Kheer","Chapati" ],
-    );
-    var sat= new day("sat",
-                ["Aloo Parantha/ Omlette and toast","Tea/Milk" ],
-                [ "Capsicum Chilli, Raita, Rajma","Rice, Chapati"],
-                ["Poha","Tea/Milk" ],
-                ["Egg Curry/ Malai Kofta, Kheer","Chapati" ],
-    );
-    var sun= new day("sun",
-                ["Aloo Parantha/ Omlette and toast","Tea/Milk" ],
-                [ "Capsicum Chilli, Raita, Rajma","Rice, Chapati"],
-                ["Poha","Tea/Milk" ],
-                ["Egg Curry/ Malai Kofta, Kheer","Chapati" ],
-    );
-///////////DAY and FOOD END
