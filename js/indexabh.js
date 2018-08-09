@@ -113,6 +113,6 @@ day.prototype.displayDetails = function(){
 }
 function action(day){
     $(".selectorthing").hide();
-    $(".cardsbg").show( 600);
+    $(".cardsbg").show(1200);
     day.displayDetails();
 }
