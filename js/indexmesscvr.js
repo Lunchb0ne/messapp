@@ -106,13 +106,14 @@ day.prototype.displayDetails = function(){
     $("#head-2").text("Lunch");
     $("#head-3").text("Snack");
     $("#head-4").text("Dinner");
-    $("#body-1").html(this.bf[0]+"<br><div>"+this.bf[1]+"</br></div>");
-    $("#body-2").html(this.lu[0]+"<br><div>"+this.lu[1]+"</br></div>");
-    $("#body-3").html(this.sn[0]+"<br><div>"+this.sn[1]+"</br></div>");
-    $("#body-4").html(this.dn[0]+"<br><div>"+this.dn[1]+"</br></div>");
+    $("#body-1").html("•"+this.bf[0]+"<br><div>"+"•"+this.bf[1]+"</br></div>");
+    $("#body-2").html("•"+this.lu[0]+"<br><div>"+"•"+this.lu[1]+"</br></div>");
+    $("#body-3").html("•"+this.sn[0]+"<br><div>"+"•"+this.sn[1]+"</br></div>");
+    $("#body-4").html("•"+this.dn[0]+"<br><div>"+"•"+this.dn[1]+"</br></div>");
 }
-function action(day){
-    $(".selectorthing").hide();
-    $(".cardsbg").show(1200);
+function action(day, mess){
+    $(".selectorthing").fadeOut(400);
+    $(".cardsbg").fadeIn(1200);
+    //$(".cardsbg").show(1200)
     day.displayDetails();
 }
