@@ -36,16 +36,23 @@ body {
 }
 //box shit
 .cardsbg{
+  margin:auto;
+  text-align: center;
+  padding: 10px;
   .box {
+    transition: 0.3s;
     margin-left: 100px;
     margin-top: 5%;
     border-radius: 8px;
     background: #ffffff;
     position: relative;
-    display: inline-block;
-    width: 33.33333%;
-    padding: 50px 50px;
-    box-shadow: 10px 10px 10px rgba(100,100,100,0.4);
+    min-width: 50%;
+    max-width: 70.33333%;
+    padding: 20px;
+    box-shadow: 6px 8px 6px rgba(100,100,100,0.4);
+    .box:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
     .cardheading{
       color: #686868;
       font-family: "Archivo Narrow";
