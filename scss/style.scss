@@ -28,7 +28,7 @@ body {
       50%{background-position:100% 9%}
       100%{background-position:0% 92%}
   }
-  @keyframes AnimationName { 
+  @keyframes AnimationName {
       0%{background-position:0% 92%}
       50%{background-position:100% 9%}
       100%{background-position:0% 92%}
@@ -42,13 +42,14 @@ body {
   .box {
     overflow: auto;
     transition: 0.3s;
-    margin-left: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
     margin-top: 5%;
     border-radius: 8px;
     background: #ffffff;
     position: relative;
     min-width: 50%;
-    max-width: 70.33333%;
+    // max-width: 70.33333%;
     padding: 20px;
     box-shadow: 6px 8px 6px rgba(100,100,100,0.4);
     .box:hover {
@@ -85,12 +86,12 @@ body {
 .typo {
   font-size: 60px;
   font-weight: 700;
-  font-family: 'Source Sans Pro', sans-serif;    
+  font-family: 'Source Sans Pro', sans-serif;
   color: #585858;
   text-decoration: none;
   option {
     font-size: 30px;
-  }  
+  }
 }
 
 .transition {
@@ -118,7 +119,7 @@ body {
     .active {
       display: block;
     }
-    
+
   }
   li {
     list-style:none;
@@ -147,12 +148,12 @@ body {
       &:after {
         width: 100%;
       }
-    }    
+    }
   }
 }
 
 select {
-  display: inline;  
+  display: inline;
   border: 0;
   width: auto;
   margin-left: 10px;
@@ -162,11 +163,11 @@ select {
   border-bottom: 2px solid $dark;
   color: $color--primary;
   transition: all .4s ease-in-out;
-  
+
   &:hover {
-    cursor: pointer;    
+    cursor: pointer;
   }
-  
+
   option {
     border: 0;
     border-bottom: 1px solid $dark;
@@ -189,6 +190,3 @@ select {
 .hide {
   opacity: 0;
 }
-
-
-
