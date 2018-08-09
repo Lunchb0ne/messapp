@@ -33,7 +33,7 @@ body {
 }
 
 .cardsbg .box {
-  margin: 5%;
+  margin: auto;
   border-radius: 8px;
   background: #ffffff;
   position: relative;
