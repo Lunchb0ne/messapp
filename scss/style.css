@@ -42,13 +42,13 @@ body {
   overflow: auto;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  margin-left: 100px;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-top: 5%;
   border-radius: 8px;
   background: #ffffff;
   position: relative;
   min-width: 50%;
-  max-width: 70.33333%;
   padding: 20px;
   -webkit-box-shadow: 6px 8px 6px rgba(100, 100, 100, 0.4);
           box-shadow: 6px 8px 6px rgba(100, 100, 100, 0.4);
