@@ -1,9 +1,7 @@
 console.clear();
-
+//---------------code for the amazing select menu-------------------------------
 var el = {};
-
-var seq;
-
+$(".cardsbg").hide();
 $('.placeholder').on('click', function (ev) {
     $('.placeholder').css('opacity', '0');
     $('.list__ul').toggle(300);
@@ -17,7 +15,6 @@ $('.list__ul a').on('click', function (ev) {
     
     //console.log($('.list__ul').find('li').eq(index).html());
     
-    seq = $('.list__ul').find('li').eq(index).html();
     $('.list__ul').find('li').eq(index).prependTo('.list__ul');
     $('.list__ul').toggle();
 });
@@ -30,7 +27,7 @@ $('select').on('change', function (e) {
     // Animate select width as placeholder
     $(this).animate({width: $('.placeholder').width() + 'px' });
 });
-
+//--------------Selet menu code end---------------------------------------------
 /*
 
 Project MAP:
@@ -54,10 +51,11 @@ day.prototype.displayDetails = function(){
     console.log(this.lu);
     console.log(this.sn);
     console.log(this.dn);
+    $(".box").textcontent = this.bf[0] + "\n" + this.bf[2];
 }
 function action(day){
     $(".selectorthing").hide();
-    $(".cardsbg").toggle();
+    $(".cardsbg").show( 600);
     day.displayDetails();
 }
 /////DAY and FOOD
