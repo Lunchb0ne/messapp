@@ -39,6 +39,7 @@ body {
 }
 
 .cardsbg .box {
+  overflow: auto;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   margin-left: 100px;
