@@ -112,6 +112,7 @@ day.prototype.displayDetails = function(){
     $("#body-4").html("•"+this.dn[0]+"<br><div>"+"•"+this.dn[1]+"</br></div>");
 }
 function action(day, mess){
+    location.hash = day;
     $(".selectorthing").fadeOut(200);
     //$(".cardsbg").fadeIn(1200);
     $(".cardsbg").show(320);
