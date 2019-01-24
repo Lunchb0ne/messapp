@@ -119,3 +119,6 @@ function action(day, mess){
     //$(".cardsbg").show(1200)
     day.displayDetails();
 }
+window.onpopstate = function(event) {
+    location.reload();
+}
