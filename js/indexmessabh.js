@@ -112,13 +112,10 @@ day.prototype.displayDetails = function(){
     $("#body-4").html("•"+this.dn[0]+"<br><div>"+"•"+this.dn[1]+"</br></div>");
 }
 function action(day, mess){
-    location.hash = "#day";
+    history.pushState(null,null,"https://lunchb0ne.me/messapp/abh.html")
     $(".selectorthing").fadeOut(200);
     //$(".cardsbg").fadeIn(1200);
     $(".cardsbg").show(320);
     //$(".cardsbg").show(1200)
     day.displayDetails();
-}
-window.onhashchange = function() {
-    location.reload();
 }
